@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流星玩AI - 个人主页</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(90deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- 导航栏 -->
+    <nav class="bg-black text-white py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <div class="text-xl font-bold">流星玩AI</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="hover:text-yellow-400 transition">关于我</a>
+                <a href="#projects" class="hover:text-yellow-400 transition">作品展示</a>
+                <a href="#contact" class="hover:text-yellow-400 transition">联系方式</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 p-4">
+            <a href="#about" class="block py-2 hover:text-yellow-400 transition">关于我</a>
+            <a href="#projects" class="block py-2 hover:text-yellow-400 transition">作品展示</a>
+            <a href="#contact" class="block py-2 hover:text-yellow-400 transition">联系方式</a>
+        </div>
+    </nav>
+
+    <!-- 英雄区 -->
+    <header class="hero-gradient text-white py-24 md:py-32">
+        <div class="container mx-auto px-4 md:px-8 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="block">追逐月亮的流星</span>
+                    <span class="block text-yellow-400 mt-2">AI赛道探索者</span>
+                </h1>
+                <p class="text-lg md:text-xl mb-8 leading-relaxed">
+                    国企程序员、需求分析师、项目经理<br>
+                    AI 破局俱乐部成员
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-yellow-500 hover:bg-yellow-600 text-black px-8 py-3 rounded-full font-medium transition">联系我</a>
+                    <a href="#projects" class="border border-white hover:border-yellow-400 hover:text-yellow-400 px-8 py-3 rounded-full font-medium transition">查看作品</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://picsum.photos/800/600?random=1" alt="流星玩AI" class="rounded-lg shadow-2xl">
+            </div>
+        </div>
+    </header>
+
+    <!-- 关于我 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">关于我</h2>
+                <div class="w-16 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://picsum.photos/600/800?random=2" alt="个人照片" class="rounded-lg shadow-xl mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-6">追逐月亮的流星 | AI赛道探索者</h3>
+                    <p class="mb-6 text-gray-600 leading-relaxed">
+                        作为一名AI社群的成员，我致力于推动效率革命，探索AI赛道的无限可能。
+                        在国企工作期间，我担任过程序员、需求分析师和项目经理等多个角色，积累了丰富的技术和管理经验。
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-code text-yellow-500 mr-3 text-xl"></i>
+                            <span>程序开发</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-robot text-yellow-500 mr-3 text-xl"></i>
+                            <span>AI应用</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-project-diagram text-yellow-500 mr-3 text-xl"></i>
+                            <span>项目管理</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-sitemap text-yellow-500 mr-3 text-xl"></i>
+                            <span>需求分析</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-block bg-black hover:bg-gray-800 text-white px-8 py-3 rounded-full font-medium transition">与我合作</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 作品展示 -->
+    <section id="projects" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">作品展示</h2>
+                <div class="w-16 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">探索我的开源项目和AI作品，这些作品展示了我在技术和创新方面的能力。</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 项目1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden project-card transition duration-300">
+                    <img src="https://picsum.photos/600/400?random=3" alt="个人主页项目" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">个人主页</h3>
+                        <p class="text-gray-600 mb-4">设计并开发个人展示网站，展示我的项目、技能和经验。</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">HTML</span>
+                                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">CSS</span>
+                                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">JS</span>
+                            </div>
+                            <a href="https://xiestar.github.io/" target="_blank" class="text-yellow-500 hover:text-yellow-600">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 项目2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden project-card transition duration-300">
+                    <img src="https://picsum.photos/600/400?random=4" alt="DeepSeek聊天机器人" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">DeepSeek聊天机器人</h3>
+                        <p class="text-gray-600 mb-4">基于最新AI技术开发的智能聊天机器人，提供自然流畅的对话体验。</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">AI</span>
+                                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">Python</span>
+                                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">NLP</span>
+                            </div>
+                            <a href="https://www.chat-with-star.top/" target="_blank" class="text-yellow-500 hover:text-yellow-600">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 项目3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden project-card transition duration-300">
+                    <img src="https://picsum.photos/600/400?random=5" alt="公众号/视频号" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">公众号/视频号：流星玩AI</h3>
+                        <p class="text-gray-600 mb-4">分享AI技术应用和最新动态，助力更多人了解和应用人工智能。</p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex space-x-2">
+                                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">内容创作</span>
+                                <span class="px-3 py-1 bg-gray-200 text-gray-700 rounded-full text-xs">AI教程</span>
+                            </div>
+                            <a href="#contact" class="text-yellow-500 hover:text-yellow-600">
+                                <i class="fas fa-qrcode"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务介绍 -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">我的专业服务</h2>
+                <div class="w-16 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">基于我在AI和软件开发领域的专业知识，为您提供以下服务</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI应用开发</h3>
+                    <p class="text-gray-600">定制化AI解决方案，帮助企业和个人利用人工智能提升效率和创新能力。</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">网站开发</h3>
+                    <p class="text-gray-600">打造响应式、用户友好的网站，提供从设计到开发的全流程服务。</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl text-center hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-chalkboard-teacher text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">AI技术培训</h3>
+                    <p class="text-gray-600">提供AI技术和应用的专业培训，帮助个人和团队掌握前沿AI技术。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="py-20 bg-black text-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">联系我</h2>
+                <div class="w-16 h-1 bg-yellow-500 mx-auto"></div>
+                <p class="text-gray-400 mt-6 max-w-2xl mx-auto">如果您有任何问题或合作意向，欢迎通过以下方式联系我</p>
+            </div>
+            <div class="flex flex-col md:flex-row bg-gray-900 rounded-xl overflow-hidden">
+                <div class="md:w-1/2 p-8 md:p-12">
+                    <h3 class="text-2xl font-bold mb-6">社交媒体</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-weixin text-xl text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-white">微信</h4>
+                                <p class="text-gray-400">baishikelele_1990</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mr-4">
+                                <i class="fab fa-weixin text-xl text-green-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-white">公众号/视频号</h4>
+                                <p class="text-gray-400">流星玩AI</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-comments text-xl text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-white">即刻</h4>
+                                <a href="https://okjk.co/SxCQnI" target="_blank" class="text-gray-400 hover:text-yellow-400 transition">https://okjk.co/SxCQnI</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-globe text-xl text-purple-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-white">个人主页</h4>
+                                <a href="https://xiestar.github.io/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition">https://xiestar.github.io/</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-robot text-xl text-red-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-white">DeepSeek聊天机器人</h4>
+                                <a href="https://www.chat-with-star.top/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition">https://www.chat-with-star.top/</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-8 md:p-12 bg-gray-800">
+                    <h3 class="text-2xl font-bold mb-6">留言咨询</h3>
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-2">您的姓名</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">电子邮箱</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-400 mb-2">留言内容</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-medium py-3 px-4 rounded-lg transition">发送留言</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-xl font-bold text-white mb-2">流星玩AI</div>
+                    <p>追逐月亮的流星 | AI赛道探索者</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-white transition">
+                        <i class="fab fa-weixin"></i>
+                    </a>
+                    <a href="https://okjk.co/SxCQnI" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-white transition">
+                        <i class="fas fa-comments"></i>
+                    </a>
+                    <a href="https://xiestar.github.io/" target="_blank" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-white transition">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p>&copy; 2023 流星玩AI. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 在移动端点击导航后关闭菜单
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
